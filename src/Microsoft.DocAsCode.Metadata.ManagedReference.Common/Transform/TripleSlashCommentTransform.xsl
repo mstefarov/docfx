@@ -196,9 +196,8 @@
               <xsl:for-each select="item">
                 <li>
                   <xsl:choose>
-                    <xsl:when test="self::node()[description|term]">
-                      <xsl:apply-templates select="term" />
-                      <xsl:apply-templates select="description" />
+                    <xsl:when test="term|description">
+                      <xsl:apply-templates select="term|description" />
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:apply-templates />
@@ -213,9 +212,8 @@
               <xsl:for-each select="item">
                 <li>
                   <xsl:choose>
-                    <xsl:when test="self::node()[description|term]">
-                      <xsl:apply-templates select="term" />
-                      <xsl:apply-templates select="description" />
+                    <xsl:when test="term|description">
+                      <xsl:apply-templates select="term|description" />
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:apply-templates />
